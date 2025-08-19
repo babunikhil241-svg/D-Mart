@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Computer Classes - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to right, #141e30, #476990);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 32px;
+      color: #00c3ff;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00c3ff;
+    }
+
+    .hero {
+      height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      animation: zoomIn 1.2s ease;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      animation: slideIn 2s ease;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ddd;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: #00c3ff;
+      border: none;
+      border-radius: 10px;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .hero button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes zoomIn {
+      from {transform: scale(0.8); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    @keyframes slideIn {
+      from {opacity: 0; transform: translateX(-50px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏣  Balaji Acadmey </h1><br>
+    <h4>&#127971 BalaJi Academy , Civil Line Gorakhpur, U.P<br>
+       BalaJi Academy , Asuran Chowk , Gorakhpur, U.P
+</h4>
+    <nav>
+      <a href="con part.html">Home</a>
+      <a href="/C:/Users/NIKHIL%20%20SINGH/OneDrive/Documents/Desktop/html/c2.html">Courses</a>
+      <a href="admision.html">Admission</a>
+      <a href="C:/Users/NIKHIL%20%20SINGH/OneDrive/Documents/Desktop/html/form2.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Balaji Computer Classes</h2>
+    <p>Join the best computer institute and start your journey with professional training in Tally, Web Designing, Python, and more!</p>
+    <button onclick="window.location.href='///C:/Users/NIKHIL%20%20SINGH/OneDrive/Documents/Desktop/html/website%20No%3D2.html'">Click Now</button>
+  </section>
+
+</body>
+</html>
