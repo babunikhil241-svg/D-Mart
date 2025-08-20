@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flipkart Cart Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+    }
+
+    .header {
+      background-color: #27d338;
+      color: white;
+      padding: 20px;
+      font-size: 26px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .cart-wrapper {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .cart-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+
+    .cart-item img {
+      width: 90px;
+      margin-right: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .item-info h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .item-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .price {
+      color: #388e3c;
+      font-weight: bold;
+    }
+
+    .qty {
+      margin-top: 10px;
+    }
+
+    .qty input {
+      width: 60px;
+      padding: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .total-section {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btns {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #fb641b;
+      color: white;
+      padding: 12px 18px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e65100;
+    }
+
+    .continue-btn {
+      background-color: #ccc;
+      color: black;
+    }
+
+    .continue-btn:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">D.Mart</div>
+
+  <div class="cart-wrapper">
+    <div class="cart-title">My Shopping Cart (2 items)</div>
+
+    <div class="cart-item">
+      <img src="C:\Users\NIKHIL  SINGH\Downloads\OIP (4).jpeg" alt="item">
+      <div class="item-info">
+        <h3>Samsung Galaxy M14</h3>
+        <p class="price">₹1,46,499</p>
+        <div class="qty">Qty: <input type="number" value="1" min="1"></div>
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <img src="C:\Users\NIKHIL  SINGH\Downloads\OIP (5).jpeg" alt="item">
+      <div class="item-info">
+        <h3>Puma Men Sneakers</h3>
+        <p class="price">₹2,499</p>
+        <div class="qty">Qty: <input type="number" value="1" min="1"></div>
+      </div>
+    </div>
+
+    <div class="total-section">Total: ₹1,48,998</div>
+
+    <div class="btns">
+    <h3> <a href="amazon.html">Continue Shopping</a> </h3>
+      <button class="btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+</body>
+</html>

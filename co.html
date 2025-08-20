@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - D-Mart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e3f2fd;
+    }
+
+    .header {
+      background-color: #0b7dda;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+    }
+
+    .contact-box {
+      background: #fff;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .contact-box h2 {
+      color: #0b7dda;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .btn {
+      background-color: #0b7dda;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0859a3;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Contact D-Mart</div>
+
+  <div class="contact-box">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Your Phone Number" required>
+      <textarea placeholder="Your Message..." required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    📍 D-Mart India Pvt Ltd. | 📞 1800-123-456 | ✉️ support@dmart.com
+  </div>
+
+</body>
+</html>
