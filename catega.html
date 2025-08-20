@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flipkart Fullscreen Categories</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #5adf31;
+      overflow: hidden;
+      
+    }
+
+    .page {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+      color: #f3f6f8;
+      font-size: 28px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .categories {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 30px;
+      background: hsl(0, 0%, 100%);
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      animation: slideIn 1s ease;
+    }
+
+    .category {
+      min-width: 150px;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: bounceIn 1s ease;
+    
+    }
+
+    .category:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(11, 125, 218, 0.3);
+    }
+
+    .category img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      animation: popIn 0.8s ease;
+       
+    }
+
+    .category p {
+      font-size: 16px;
+      color: #333;
+      margin: 0;
+      
+    }
+
+    .categories::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+    /* Animations */
+    @keyframes slideIn {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0%   { transform: scale(0.5); opacity: 0; }
+      60%  { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <h2>Shop by Categories</h2>
+
+    <div class="categories">
+      <div class="category">
+        <a href="file:///C:/Users/NIKHIL%20%20SINGH/OneDrive/Documents/Desktop/html/.vscode/electroic.html"> <img src="C:\Users\NIKHIL  SINGH\Downloads\Home-Appliance-Background-PNG.png"alt="Electronics"/>
+        <p>Electronics</p>
+      </div>
+      <div class="category">
+       <a href="file:///C:/Users/NIKHIL%20%20SINGH/OneDrive/Documents/Desktop/html/.vscode/fasion.html"> <img src="C:\Users\NIKHIL  SINGH\Downloads\pngtree-fashion-typography-autumn-and-winter-new-fashion-men-s-wear-new-png-image_7534533.png" alt="Fashion"/>
+        <p>Fashion</p>
+      </div>
+      
+      <div class="category">
+       <a href="mobile.html"> <img src="C:\Users\NIKHIL  SINGH\Downloads\1600x960_1289668-mobiles-11.png" alt="Mobiles"/>
+        <p>Mobiles</p>
+      </div>
+      <div class="category">
+       <a href="medicine.html"> <img src="C:\Users\NIKHIL  SINGH\Downloads\OIP (7).jpeg" alt="Appliances"/>
+        <p>Medicine</p>
+      </div>
+      <div class="category">
+       <a href="#"> <img src="C:\Users\NIKHIL  SINGH\Downloads\wp1852765.webp" alt="Beauty"/>
+        <p>Beauty</p>
+      </div>
+      <div class="category">
+        <a href="#"> <img src="C:\Users\NIKHIL  SINGH\Downloads\a-set-of-books-of-various-sizes-and-colors-stacked-one-on-top-of-the-other-placed-on-a-transparent-background-to-create-a-realistic-effect-generative-ai-png.webp" alt="Books"/>
+        <p>Books</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
