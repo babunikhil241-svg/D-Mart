@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Animated Menu with Back Button</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #111;
+      margin: 0;
+      padding: 40px 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 🔙 Back Button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #ff6ec7, #6eb5ff, #ffc371);
+      border: none;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: glow 2s infinite;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ff6ec7, 0 0 25px #6eb5ff, 0 0 35px #ffc371;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px #ff6ec7; }
+      50% { box-shadow: 0 0 20px #6eb5ff; }
+      100% { box-shadow: 0 0 5px #ffc371; }
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 50px;
+    }
+
+    .card {
+      perspective: 1000px;
+    }
+
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .inner {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      overflow: hidden;
+    }
+
+    .front {
+      background: linear-gradient(135deg, #ff6ec7, #6eb5ff, #ffc371);
+    }
+
+    .front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .back {
+      background: #222;
+      transform: rotateY(180deg);
+      padding: 20px;
+      text-align: center;
+      border: 3px solid transparent;
+      border-image: linear-gradient(90deg, #ff6ec7, #6eb5ff, #ffc371) 1;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back h3 {
+      font-size: 22px;
+      margin: 10px 0;
+      background: linear-gradient(90deg, #ff6ec7, #6eb5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .back p {
+      font-size: 14px;
+      margin: 5px 0;
+      color: #bbb;
+    }
+
+    .price {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #ffc371;
+      font-weight: bold;
+    }
+    .bg-video{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+     height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      background-size: 50%;
+      opacity: 0.9;
+    }
+    .btn {
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #ff6ec7, #6eb5ff, #ffc371);
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      margin-top: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: glow 2s infinite;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ff6ec7, 0 0 25px #6eb5ff, 0 0 35px #ffc371;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔙 Back Button -->
+  <button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+  <div class="menu">
+    <div class="card">
+      <div class="inner">
+        <div class="front">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/k/s/z/1-wheel-rotating-watch-for-men-a27-jarurati-store-men-original-imahff8zeyvyhme5.jpeg?q=70" alt="Product 1">
+        </div>
+        <div class="back">
+          <h3>Neon Sneakers</h3>
+          <p>Glow in the dark stylish shoes.</p>
+          <div class="price">$59.99</div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="card">
+      <div class="inner">
+        <div class="front">
+          <img src="https://rukminim2.flixcart.com/image/300/300/xif0q/watch/y/l/5/1-01-skylona-men-original-imaguqnj8fcwrbzd.jpeg?q=90" alt="Product 2">
+        </div>
+        <div class="back">
+          <h3>Cyber Jacket</h3>
+          <p>Futuristic design with neon vibes.</p>
+          <div class="price">$109.99</div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="card">
+      <div class="inner">
+        <div class="front">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/j/l/g/1-flowered-red-tt-3-jarurati-store-men-original-imahff8c3zxdmc7v.jpeg?q=70" alt="Product 3">
+        </div>
+        <div class="back">
+          <h3>Golden Headphones</h3>
+          <p>Premium sound & luxury style.</p>
+          <div class="price">$149.99</div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+  <script>
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        alert("✨ Product added to cart!");
+      });
+    });
+  </script>
+  <video autoplay muted loop class="bg-video">
+    <source src="C:\Users\NIKHIL  SINGH\Videos\Cinematic Watch Product Video Commercial Example _ Rolex Timex Omega Samsung Apple Jewelry Amazon Ad 1080p.mp4">
+    
+  </video>
+
+</body>
+</html>

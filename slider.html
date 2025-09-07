@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Cube Slider</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('C:/Users/NIKHIL  SINGH/OneDrive/Documents/Pictures/Camera imports/2025-03-02/IMG_20240307_095425_627.jpg');
+      background-size:contain;
+    
+      font-family: sans-serif;
+      
+    }
+
+    .slider {
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .cube {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 15s infinite linear;
+    }
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity:1.5;
+      border: 2px solid #fff;
+    }
+
+    .face1 { transform: rotateY(0deg) translateZ(150px); background-image: url('C:/Users/NIKHIL  SINGH/OneDrive/Documents/Pictures/Camera imports/2025-03-02/IMG_20230608_101321_267.jpg'); }
+    .face2 { transform: rotateY(90deg) translateZ(150px); background-image: url('C:/Users/NIKHIL  SINGH/OneDrive/Documents/Pictures/Camera imports/2025-03-02/IMG_20240909_171709_320.jpg'); }
+    .face3 { transform: rotateY(180deg) translateZ(150px); background-image: url('C:/Users/NIKHIL  SINGH/OneDrive/Documents/Pictures/Camera imports/2025-03-02/IMG_20241110_222456.jpg'); }
+    .face4 { transform: rotateY(-90deg) translateZ(150px); background-image: url('C:/Users/NIKHIL  SINGH/OneDrive/Documents/Pictures/Camera imports/2025-03-02/1000018291.jpg'); }
+
+    @keyframes rotate {
+      0%   { transform: rotateY(0deg); }
+      25%  { transform: rotateY(90deg); }
+      50%  { transform: rotateY(180deg); }
+      75%  { transform: rotateY(270deg); }
+      100% { transform: rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="cube">
+      <div class="face face1"></div>
+      <div class="face face2"></div>
+      <div class="face face3"></div>
+      <div class="face face4"></div>
+    </div>
+  </div>
+
+</body>
+</html>
